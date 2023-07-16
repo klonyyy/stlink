@@ -286,7 +286,13 @@ int32_t stlink_fread(stlink_t* sl, const char* path, bool is_ihex, stm32_addr_t 
 int32_t stlink_load_device_params(stlink_t *sl);
 int32_t stlink_target_connect(stlink_t *sl, enum connect_type connect);
 
+#include <sg.h>
+#include <usb.h>
+#include <commands.h>
+#include <chipid.h>
+#include <flash_loader.h>
 #include <version.h>
+#include <logging.h>
 
 #ifdef __cplusplus
 }
