@@ -9,7 +9,7 @@
 #define LOGGING_H
 
 #include "spdlogWrapper.h"
-
+#include <stdint.h>
 #ifdef  __cplusplus
 extern "C" {
 #endif // __cplusplus
@@ -41,6 +41,16 @@ int32_t ugly_libusb_log_level(enum ugly_loglevel v);
 #define ILOG(...) spdlogLog(UINFO, __VA_ARGS__)
 #define WLOG(...) spdlogLog(UWARN, __VA_ARGS__)
 #define ELOG(...) spdlogLog(UERROR, __VA_ARGS__)
+
+// #define DLOG_HELPER(format, ...)   ugly_log(UDEBUG, UGLY_LOG_FILE, format, __VA_ARGS__)
+// #define DLOG(...) ugly_log(UDEBUG, UGLY_LOG_FILE, __VA_ARGS__)
+// #define ILOG_HELPER(format, ...)   ugly_log(UINFO, UGLY_LOG_FILE, format, __VA_ARGS__)
+// #define ILOG(...) ugly_log(UINFO, UGLY_LOG_FILE, __VA_ARGS__)
+// #define WLOG_HELPER(format, ...)   ugly_log(UWARN, UGLY_LOG_FILE, format, __VA_ARGS__)
+// #define WLOG(...) ugly_log(UWARN, UGLY_LOG_FILE, __VA_ARGS__)
+// #define ELOG_HELPER(format, ...)   ugly_log(UERROR, UGLY_LOG_FILE, format, __VA_ARGS__)
+// #define ELOG(...) ugly_log(UERROR, UGLY_LOG_FILE, __VA_ARGS__)
+
 
 #ifdef  __cplusplus
 }
